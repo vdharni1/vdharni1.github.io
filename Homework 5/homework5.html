@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -78,30 +79,30 @@
   <!-- toggle script (you can move this into an external file if you prefer) -->
   <script>
     // global boolean controlling nav
-    let isOpen = true;
+    let isOpen = true; //DONE BY VIDHI
 
     // Called by the menu button in your HTML
     // navElement is document.getElementsByClassName('navStyle')[0]
-    function hideBar(navElement) {
+    function hideBar(navElement) {//DONE BY VIDHI
       // toggle boolean
-      isOpen = !isOpen;
+      isOpen = !isOpen;//DONE BY VIDHI
 
       const menu = document.getElementById('menu');
       const content = document.querySelector('.container-content');
 
-      if (isOpen) {
+      if (isOpen) {//DONE BY VIDHI
         // show nav
-        navElement.classList.remove('hidden');
-        navElement.classList.add('open');
+        navElement.classList.remove('hidden');//DONE BY VIDHI
+        navElement.classList.add('open');//DONE BY VIDHI
         navElement.setAttribute('aria-hidden', 'false');
         menu.setAttribute('aria-expanded', 'true');
 
         // reset content back to original layout
         content.classList.remove('nav-collapsed');
-      } else {
+      } else {//DONE BY VIDHI
         // hide nav
-        navElement.classList.add('hidden');
-        navElement.classList.remove('open');
+        navElement.classList.add('hidden');//DONE BY VIDHI
+        navElement.classList.remove('open');//DONE BY VIDHI
         navElement.setAttribute('aria-hidden', 'true');
         menu.setAttribute('aria-expanded', 'false');
 
