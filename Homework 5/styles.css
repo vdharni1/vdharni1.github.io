@@ -1,3 +1,4 @@
+
 * {
     --orange: #EF8354;
     --darkblue: #2D3142; 
@@ -358,18 +359,18 @@ nav.navStyle {
 
 /* when nav is hidden, slide it left off-screen */
 nav.navStyle.hidden {
-  transform: translateX(-100%);
+  transform: translateX(-100%); /*DONE BY VIDHI*/
 }
 
 /* when nav is explicitly open use this class (helps mobile) */
 nav.navStyle.open {
-  transform: translateX(0);
+  transform: translateX(0); /*DONE BY VIDHI*/
 }
 
 /* container state when nav is collapsed (takes more space) */
 .container-content.nav-collapsed {
-  left: 5vw;    /* move content left when sidebar is hidden */
-  width: 90vw;  /* expand to take more room */
+  left: 5vw;    /*DONE BY VIDHI*/
+  width: 90vw;  /*DONE BY VIDHI*/
 }
 
 /* ensure the menu button stays on top */
