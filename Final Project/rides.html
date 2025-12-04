@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rides - Epic Universe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page page-rides">
+    <header class="topbar">
+      <a class="back" href="index.html">&larr; Home</a>
+      <h1>Rides</h1>
+    </header>
+    <article class="content">
+      <div class="hero-card">
+        <img src="assets/rides.jpg" alt="Rides">
+        <div class="overlay center"><h2>Rides</h2></div>
+      </div>
+      <section>
+        <h3>Ride List</h3>
+        <p>Choose an intensity to highlight matching rides.</p>
+        <div class="filter-row">
+          <select id="intensityFilter">
+            <option value="all">All</option>
+            <option value="low">Low</option>
+            <option value="high">High</option>
+          </select>
+          <button id="applyFilter" class="btn">Highlight</button>
+        </div>
+        <ul id="ridesList" class="menu-list">
+          <li data-intensity="high">Dragon Coaster - high intensity</li>
+          <li data-intensity="low">Carousel Express - low intensity</li>
+          <li data-intensity="high">Storm Chaser - high intensity</li>
+          <li data-intensity="low">Lazy River - low intensity</li>
+          <li data-intensity="high">Stardust Racers (personal favorite) - high intensity</li>
+          <li data-intensity="low">Fyre Drill - low intensity</li>
+        </ul>   
+      </section>
+    </article>
+ <script src="script.js"></script>
+</body>
+</html>
