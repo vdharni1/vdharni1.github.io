@@ -1,31 +1,115 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Guide to Epic Universe - Home</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Epic Universe Guide</title>
+
+<!-- cdn-->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&display=swap" rel="stylesheet">
+<!--css-->
+<link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <main class="page page-home">
-    <header class="topbar">
-      <h1 class="site-title">Guide to Epic Universe<br><span class="subtitle">at Universal Studios</span></h1>
-    </header>
-    <div class="cards">
-      <a class="card" href="map.html">
-        <img src="assets/map.jpg" alt="Map preview">
-        <div class="overlay"><span class="card-text">Map</span></div>
-      </a>
-      <a class="card" href="food.html">
-        <img src="assets/food.jpg" alt="Food preview">
-        <div class="overlay"><span class="card-text">Food</span></div>
-      </a>
-      <a class="card" href="rides.html">
-        <img src="assets/rides.jpg" alt="Rides preview">
-        <div class="overlay"><span class="card-text">Rides</span></div>
-      </a>
-    <div>
-  <script src="script.js"></script>
+<!--home-->
+<section id="homePage" class="page active">
+  <header class="topbar">
+    <h1 class="site-title">
+      Guide to Epic Universe<br>
+      <span class="subtitle">at Universal Studios</span>
+    </h1>
+  </header>
+
+  <div class="cards">
+
+    <div class="card" onclick="showPage('mapPage')">
+      <img src="assets/map.jpg" alt="Map">
+      <div class="overlay">Map</div>
+    </div>
+
+    <div class="card" onclick="showPage('foodPage')">
+      <img src="assets/food.jpg" alt="Food">
+      <div class="overlay">Food</div>
+    </div>
+
+    <div class="card" onclick="showPage('ridesPage')">
+      <img src="assets/rides.jpg" alt="Rides">
+      <div class="overlay">Rides</div>
+    </div>
+
+  </div>
+</section>
+<!--map-->
+<section id="mapPage" class="page">
+  <header class="topbar">
+    <span class="back" onclick="showPage('homePage')">&larr; Home</span>
+    <h1>Park Map</h1>
+  </header>
+
+  <div class="pdf-container">
+    <embed src="assets/actualmap.pdf" width="100%" height="600px">
+  </div>
+</section>
+<!--food-->
+<section id="foodPage" class="page">
+  <header class="topbar">
+    <span class="back" onclick="showPage('homePage')">&larr; Home</span>
+    <h1>Food</h1>
+  </header>
+
+  <div class="hero-card">
+    <img src="assets/food.jpg" alt="Food image">
+    <div class="center">Food & Eats</div>
+  </div>
+
+  <h3>Must-try Dishes</h3>
+  <p>Here are some popular themed items worth trying during your visit.</p>
+
+  <ul class="menu-list">
+    <li>Epic Burger — Juicy and delicious</li>
+    <li>Galaxy Fries — Crispy and fun</li>
+    <li>Starlight Dessert — Sweet & photogenic</li>
+    <li>Burning Cheddar Bites — Crunchy</li>
+    <li>Butterbeer Crepes — Kids love them</li>
+  </ul>
+
+  <button id="suggestBtn" class="btn">Click for A Random Suggestion</button>
+  <p id="suggestion" class="muted" style="margin-top:10px;"></p>
+</section>
+
+<!--rides-->
+<section id="ridesPage" class="page">
+  <header class="topbar">
+    <span class="back" onclick="showPage('homePage')">&larr; Home</span>
+    <h1>Rides</h1>
+  </header>
+
+  <div class="hero-card">
+    <img src="assets/rides.jpg" alt="Rides image">
+    <div class="center">Rides</div>
+  </div>
+
+  <h3>Ride List</h3>
+  <p>Select an intensity level to highlight matching rides.</p>
+
+  <select id="intensityFilter">
+    <option value="all">All</option>
+    <option value="low">Low</option>
+    <option value="high">High</option>
+  </select>
+
+  <button id="applyFilter" class="btn">Highlight</button>
+
+  <ul id="ridesList" class="menu-list">
+    <li data-intensity="high">Dragon Coaster — High</li>
+    <li data-intensity="low">Carousel Express — Low</li>
+    <li data-intensity="high">Storm Chaser — High</li>
+    <li data-intensity="low">Lazy River — Low</li>
+    <li data-intensity="high">Stardust Racers — High</li>
+    <li data-intensity="low">Fyre Drill — Low</li>
+  </ul>
+</section>
+<script src="script.js"></script>
 </body>
 </html>
